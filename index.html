@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sylas's Nations</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p class="txtn">NATION ONE: <a class="txtn2"  id='1'>NONE</a></p>
+  <p> </p>
+  <p class="txtn">NATION TWO: <a class="txtn2" id='2'>NONE</a> </p>
+  <p> </p>
+  <button id="c" onclick="c()">CHOOSE</button>
+  <button id="a" onclick="a()">ACTION</button>
+  <p> </p>
+  <div id="act">
+    <p class="txtn">NONE: <a class="txtn2"> </a></p>
+  </div>
+  <p> </p>
+  <div id="nats">
+    
+  </div>
+  <p> </p>
+  <p id="ds" onclick="document.getElementById('disc').textContent = 'PLEASE WAIT...'; document.getElementById('disc').click();">Discord</p>
+  <a href="https://discord.gg/5XHjPcNxDB" id="disc"></a>
+  <p> </p>
+  <button class="blue" onclick='bType = 1'>POWER BONUS</button>
+  <button class="green" onclick='bType = 3'>CHANGE BONUS</button>
+  <p> </p>
+  <button class="green" onclick='modMenu()'>MODS</button>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <input class="mod" type="text" id="m" placeholder="modname.js">
+  <p> </p>
+  <button class="mod"  id="m2" onclick="saveMod(document.getElementById('m').value)">SAVE MOD</button>
+  <p> </p>
+  <button class="mod"  id="m3" onclick="removeMod(document.getElementById('m').value)">REMOVE MOD</button>
+  <p> </p>
+  <div class="mod" id="mList">
+    
+  </div>
+  <p> </p>
+  <div class="mod2" id="mList2">
+    <li>oil.js - Sylas</li>
+    <li>power-editor.js - Sylas</li>
+    <li>bugmania.js - Sylas</li>
+    <li>Want your own mod? no tutorials yet just study other mods lmfao, dm us at the discord server in channel called "mod adding" in the modding category, send the file and boom, done</li>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
