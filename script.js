@@ -4,7 +4,7 @@ let nations = {
     name: "Germany",
     power: 17,
     changeMin: 1,
-    changeMax: 3,
+    changeMax: 5,
     color: ["#4a4949", "#4a4949", "#e82727", "#e82727", "#edc124", "#edc124"],
   },
   "POL": {
@@ -12,7 +12,7 @@ let nations = {
     name: "Poland",
     power: 13,
     changeMin: 1,
-    changeMax: 3,
+    changeMax: 4,
     color: ["#ff0000", "#ff0000", "#dedede", "#dedede"],
   },
   "CZE": {
@@ -36,7 +36,7 @@ let nations = {
     name: "Russia",
     power: 24,
     changeMin: 1,
-    changeMax: 4,
+    changeMax: 7,
     color: ["#ff0000", "#2471ed", "#dedede"],
   },
   "USA": {
@@ -44,8 +44,32 @@ let nations = {
     name: "United States",
     power: 24,
     changeMin: 1,
-    changeMax: 4,
+    changeMax: 7,
     color: ["#2471ed", "#dedede", "#ff0000"],
+  },
+  "HUN": {
+    key: "HUN",
+    name: "Hungary",
+    power: 12,
+    changeMin: 1,
+    changeMax: 3,
+    color: ["#ed3c2f", "#e0e0e0", "#35b83c"],
+  },
+  "FRA": {
+    key: "FRA",
+    name: "France",
+    power: 15,
+    changeMin: 1,
+    changeMax: 5,
+    color: ["#041185", "#f2f2f2", "#f53333"],
+  },
+  "SCT": {
+    key: "SCT",
+    name: "Scotland",
+    power: 5,
+    changeMin: 1,
+    changeMax: 2,
+    color: ["#33e1f5", "#f2f2f2", "#33e1f5"],
   },
 }
 
