@@ -50,3 +50,4 @@ function customTick() {
     }
   }
 }
+setInterval(customTick, 500)
