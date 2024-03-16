@@ -116,22 +116,6 @@ function tick() {
     backMap = {}
     for (const k in nations) {
       nations[k].power += Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)
-      if (nations[k].power < 0 && nations[k].power > -50) {
-          nations[k].mood = "sad";
-      } else if (nations[k].power < -49) {
-          nations[k].mood = "pain";
-      } else if (nations[k].power > 0 && nations[k].power <= 50) {
-          nations[k].mood = "normal";
-      } else if (nations[k].power > 50 && nations[k].power <= 135) {
-          nations[k].mood = "stronk";
-      } else if (nations[k].power > 135) {
-          nations[k].mood = "super stronk";
-      }
-
-      if ("FRA" in nations && "GER" in nations) {
-        nations.GER.mood = "pain (france exists) "
-      }
-    }
     const natsList = document.getElementById('nats');
     while (natsList.firstChild) {
       natsList.removeChild(natsList.firstChild);
@@ -144,6 +128,27 @@ function tick() {
       nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood;
       nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + " background-size: 865px 30px;" + " background-repeat: no-repeat; cursor: pointer;"
       natsList.appendChild(nl);
+    }
+  }
+  mood()
+}
+
+function mood() {
+  for (const k in nations) {
+    if (nations[k].power < 0 && nations[k].power > -50) {
+        nations[k].mood = "sad";
+    } else if (nations[k].power < -49) {
+        nations[k].mood = "pain";
+    } else if (nations[k].power > 0 && nations[k].power <= 50) {
+        nations[k].mood = "normal";
+    } else if (nations[k].power > 50 && nations[k].power <= 135) {
+        nations[k].mood = "stronk";
+    } else if (nations[k].power > 135) {
+        nations[k].mood = "super stronk";
+    }
+
+    if ("FRA" in nations && "GER" in nations) {
+      nations.GER.mood = "pain (france exists) "
     }
   }
 }
