@@ -17,4 +17,4 @@ function customTick() {
     nations.POL.mood = "fear"
   }
 }
-setInterval(customTick, 500)
+setInterval(customTick, 501)
