@@ -8,14 +8,28 @@ nations.MS = {
     color: ["#355E3B", "#114232"]
 }
 
-function customTick() {
-  console.log('hi')
-  if ("FRA" in nations && "GER" in nations) {
-    nations.GER.mood = "pain (france exists) "
-  } else if ('GER' in nations && 'RUS' in nations && 'POL' in nations) {
-    nations.POL.mood = "mega fear"
-  } else if (('RUS' in nations || 'GER' in nations)  && 'POL' in nations) {
-    nations.POL.mood = "fear"
+function mood() {
+  for (const k in nations) {
+    if (nations[k].power < 0 && nations[k].power > -50) {
+        nations[k].mood = "sad";
+    } else if (nations[k].power < -49) {
+        nations[k].mood = "pain";
+    } else if (nations[k].power > 0 && nations[k].power <= 50) {
+        nations[k].mood = "normal";
+    } else if (nations[k].power > 50 && nations[k].power <= 135) {
+        nations[k].mood = "stronk";
+    } else if (nations[k].power > 135) {
+        nations[k].mood = "super stronk";
+    }
+
+    if ("FRA" in nations && "GER" in nations) {
+      nations.GER.mood = "pain (france exists)"
+    } else if ('GER' in nations && 'POL' in nations) {
+      nations.POL.mood = "fear"
+    } else if ('RUS' in nations && 'POL' in nations) {
+      nations.POL.mood = "fear"
+    } else if ('GER' in nations && 'RUS' in nations && 'POL' in nations) {
+      nations.POL.mood = "super fear"
+    }
   }
 }
-setInterval(customTick, 501)
