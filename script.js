@@ -175,8 +175,10 @@ function a() {
     nations[two.key].mood = "sad"
     nations[one.key].power += two.changeMin + 5
     document.getElementById('act').textContent = "WON: " + nations[one.key].name
+    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
   } else if (one.power === two.power) {
     document.getElementById('act').textContent = "TIE: " + nations[one.key].name + " - " + nations[two.key].name;
+    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
     nations[two.key].power -= two.changeMax - 3
     nations[one.key].power -= one.changeMax - 3
   } else {
@@ -184,6 +186,7 @@ function a() {
     nations[one.key].power -= one.changeMin + 5
     nations[one.key].mood = "sad"
     document.getElementById('act').textContent = "WON: " + nations[two.key].name
+    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
   }
   c()
 }
