@@ -11,6 +11,7 @@ nations.MS = {
 canTick = false
 let modTick = true
 function customTick() {
+  console.log('works')
   if (modTick == true) {
     backMap = {}
     for (const k in nations) {
