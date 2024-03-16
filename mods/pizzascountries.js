@@ -9,6 +9,7 @@ nations.MS = {
 }
 
 function customTick() {
+  console.log('hi')
   if ("FRA" in nations && "GER" in nations) {
     nations.GER.mood = "pain (france exists) "
   } else if ('GER' in nations && 'RUS' in nations && 'POL' in nations) {
