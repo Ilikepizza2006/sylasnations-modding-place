@@ -8,8 +8,6 @@ nations.MS = {
     color: ["#355E3B", "#114232"]
 }
 
-canTick = false
-let modTick = true
 function customTick() {
   if ("FRA" in nations && "GER" in nations) {
     nations.GER.mood = "pain (france exists) "
