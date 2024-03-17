@@ -253,6 +253,7 @@ function modMenu() {
 }
 
 window.onload = function() {
+  console.log('hi')
   for (const c of document.getElementById('nats').children) {
     document.getElementById('nats').removeChild(c)
   }
