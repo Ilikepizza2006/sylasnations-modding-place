@@ -116,6 +116,7 @@ function tick() {
     backMap = {}
     for (const k in nations) {
       nations[k].power += Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)
+    }
     const natsList = document.getElementById('nats');
     while (natsList.firstChild) {
       natsList.removeChild(natsList.firstChild);
