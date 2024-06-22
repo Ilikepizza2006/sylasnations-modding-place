@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'mainfonts';
+    src: url('PressStart2P-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'mainfonts';
+  background-color: #454545;
+}
+table, th, td {
+  border: 1px solid grey;
+}
+th {
+  background-color: #a1a1ff;
+}

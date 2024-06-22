@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+#a {
+  background-image: linear-gradient(to right, #ff0000, #ffb22e);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+#c {
+  background-image: linear-gradient(to right, #61ff81, #ffea00);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+.txtn {
+  background-image: linear-gradient(to right, #006eff, #00aaff);
+  background-size: 180px 1250px;
+  background-repeat: no-repeat;
+}
+.txtn2 {
+  background-image: linear-gradient(to right, #ff0000, #ae00ff);
+  background-size: 2500px 1250px;
+  background-repeat: no-repeat;
+}
+@font-face {
+    font-family: 'mainfonts';
+    src: url('PressStart2P-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'mainfonts';
+  background-color: #454545;
+}
+.mod {
+  border-radius: 10px;
+  display: none;
+  height: 60px;
+  width: 1200px;
+  font-size: 20px;
+  background-image: linear-gradient(to right, #61ff81, #ffea00);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.mod2 {
+  border-radius: 10px;
+  display: none;
+  height: 300px;
+  width: 1200px;
+  font-size: 20px;
+  background-image: linear-gradient(to right, #61ff81, #ffea00);
+  background-size: 500% 1000% 500% 1000%;
+  background-repeat: no-repeat;
+}
+#ds {
+  color: purple;
+  cursor: pointer;
+  font-size: 20px;
+}
+.green {
+  background-image: linear-gradient(to right, #61ff81, #ffea00);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border-radius: 10px;
+}
+.blue {
+  background-image: linear-gradient(to right, #0388fc, #8ceeff);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}

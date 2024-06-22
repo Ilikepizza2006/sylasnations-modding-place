@@ -2,6 +2,7 @@ let nations = {
   "GER": {
     key: "GER",
     name: "Germany",
+    ideology: "democratic",
     power: 17,
     changeMin: 1,
     changeMax: 5,
@@ -11,6 +12,7 @@ let nations = {
   "POL": {
     key: "POL",
     name: "Poland",
+    ideology: "democratic",
     power: 13,
     changeMin: 1,
     changeMax: 4,
@@ -20,6 +22,7 @@ let nations = {
   "CZE": {
     key: "CZE",
     name: "Czechia",
+    ideology: "democratic",
     power: 14,
     changeMin: 1,
     changeMax: 4,
@@ -29,15 +32,17 @@ let nations = {
   "SKO": {
     key: "SKO",
     name: "Slovakia",
+    ideology: "democratic",
     power: 8,
     changeMin: 1,
     changeMax: 3,
     color: ["#ff0000", "#2471ed", "#dedede"],
-    mood: "slave"
+    mood: "smol"
   },
   "RUS": {
     key: "RUS",
     name: "Russia",
+    ideology: "democratic",
     power: 24,
     changeMin: 1,
     changeMax: 7,
@@ -47,6 +52,10 @@ let nations = {
   "USA": {
     key: "USA",
     name: "United States",
+    ideology: "democratic",
+    attributes: [
+      "noformat"
+    ],
     power: 24,
     changeMin: 1,
     changeMax: 7,
@@ -56,15 +65,17 @@ let nations = {
   "HUN": {
     key: "HUN",
     name: "Hungary",
+    ideology: "democratic",
     power: 12,
     changeMin: 1,
     changeMax: 3,
     color: ["#ed3c2f", "#e0e0e0", "#35b83c"],
-    mood: "gae"
+    mood: "ew"
   },
   "FRA": {
     key: "FRA",
     name: "France",
+    ideology: "democratic",
     power: 15,
     changeMin: 1,
     changeMax: 5,
@@ -74,11 +85,27 @@ let nations = {
   "SCT": {
     key: "SCT",
     name: "Scotland",
+    ideology: "democratic",
     power: 5,
     changeMin: 1,
     changeMax: 2,
     color: ["#33e1f5", "#f2f2f2", "#33e1f5"],
     mood: "nub"
+  },
+}
+
+const ideologies = {
+  democratic: {
+    format: 'Republic of COUNTRY',
+    change: 5
+  },
+  communist: {
+    format: 'Socialist Republic of COUNTRY',
+    change: 3
+  },
+  fascist: {
+    format: 'Empire of COUNTRY',
+    change: 4
   },
 }
 
@@ -115,7 +142,10 @@ function tick() {
   if (canTick == true) {
     backMap = {}
     for (const k in nations) {
-      nations[k].power += Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)
+      const idea = nations[k].ideology
+      if (idea in ideologies) {
+        nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
+      }
     }
     const natsList = document.getElementById('nats');
     while (natsList.firstChild) {
@@ -126,8 +156,12 @@ function tick() {
       nl.onclick = function() {
         bonus(bType, nations[k].key)
       }
-      nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood;
-      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + " background-size: 865px 30px;" + " background-repeat: no-repeat; cursor: pointer;"
+      if (nations[k].attributes && nations[k].attributes.includes("noformat")) {
+        nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
+      } else {
+        nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
+      }
+      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer;"
       natsList.appendChild(nl);
     }
   }
