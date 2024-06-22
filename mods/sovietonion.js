@@ -1,4 +1,4 @@
-nations.USR: {
+nations.USR = {
     key: "USR",
     name: "Soviet Union",
     ideology: "communism",
@@ -7,6 +7,6 @@ nations.USR: {
     changeMax: 8,
     color: ['#ffde00', '#ff0000', '#ff0000'],
     mood: "vodka and ak47"
-  }
+}
 
 delete nations.RUS
