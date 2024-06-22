@@ -1,7 +1,8 @@
 nations.USR = {
     key: "USR",
-    name: "Soviet Union",
+    name: "Union of Soviet Socialist Republics",
     ideology: "communist",
+    attributes: ["noformat"],
     power: 24,
     changeMin: 1,
     changeMax: 8,
