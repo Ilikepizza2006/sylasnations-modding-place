@@ -23,4 +23,5 @@ wwiiilauncher.style.backgroundImage = "linear-gradient(to right, #61ff81, #ffea0
 wwiiilauncher.style.backgroundSize = "50% 100% 50% 100%";
 wwiiilauncher.style.backgroundRepeat = "no-repeat";
 wwiiilauncher.style.borderRadius = "10px";
-document.body.appendChild(wwiiilauncher);
+const htmlofbtn = wwiiilauncher.outerHTML;
+document.getElementById('a').outerHTML = document.getElementById('a').outerHTML + htmlofbtn
