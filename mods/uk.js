@@ -4,6 +4,7 @@ nations.UK = {
     key: "UK",
     name: "United Kingdom",
     ideology: "democratic",
+    attributes: ["noformat"],
     power: 25, // cry about it if its too low
     changeMin: 1,
     changeMax: 10,
