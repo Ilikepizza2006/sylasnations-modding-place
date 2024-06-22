@@ -112,6 +112,8 @@ const ideologies = {
 let backMap = {}
 
 let one = null
+let year = 0
+let ycounter = 0
 let two = null
 let canTick = true
 let used = false
@@ -139,6 +141,12 @@ function c() {
 }
 
 function tick() {
+  ycounter += 0.5
+  if (ycounter == 10.0) {
+    year += 1
+    ycounter = 0
+    document.getElementById('year').textContent = 'YEAR: ' + year
+  }
   if (canTick == true) {
     backMap = {}
     for (const k in nations) {
