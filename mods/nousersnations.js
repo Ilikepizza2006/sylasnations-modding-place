@@ -1,781 +1,971 @@
 const nationObject = {
     "Afghanistan": {
       "key": "AFG",
-      "colors": ["#004C4C", "#D82828", "#FFFFFF"]
+      "colors": ["#007A5E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Albania": {
       "key": "ALB",
-      "colors": ["#E41A1C", "#000000", "#FFFFFF"]
+      "colors": ["#E41A13", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Algeria": {
-      "key": "ALG",
-      "colors": ["#006233", "#D52B1E", "#FFFFFF"]
+      "key": "DZA",
+      "colors": ["#007A33", "#FFFFFF", "#D52B1E"],
+      "ideology": "Democratic"
     },
     "Andorra": {
       "key": "AND",
-      "colors": ["#FFCD00", "#D62828", "#003DA5"]
+      "colors": ["#0055A4", "#FFD100", "#EF4135"],
+      "ideology": "Monarchy"
     },
     "Angola": {
-      "key": "ANG",
-      "colors": ["#DD0000", "#000000", "#FFFF00"]
+      "key": "AGO",
+      "colors": ["#FF0000", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
+    },
+    "Antigua and Barbuda": {
+      "key": "ATG",
+      "colors": ["#FFD100", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Argentina": {
       "key": "ARG",
-      "colors": ["#75AADB", "#FFFFFF", "#F7D618"]
+      "colors": ["#74ACDF", "#FFFFFF", "#FFD100"],
+      "ideology": "Democratic"
     },
     "Armenia": {
       "key": "ARM",
-      "colors": ["#D90012", "#0033A0", "#F2A800"]
+      "colors": ["#0033A0", "#FFD100", "#EF4135"],
+      "ideology": "Democratic"
     },
     "Australia": {
       "key": "AUS",
-      "colors": ["#00008B", "#FFFFFF", "#FF0000"]
+      "colors": ["#00008B", "#FFFFFF", "#FF0000"],
+      "ideology": "Democratic"
     },
     "Austria": {
       "key": "AUT",
-      "colors": ["#ED2939", "#FFFFFF", "#000000"]
+      "colors": ["#EF3340", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Azerbaijan": {
       "key": "AZE",
-      "colors": ["#00BFFF", "#FF0000", "#FFFFFF"]
+      "colors": ["#00B0E0", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Bahamas": {
-      "key": "BAH",
-      "colors": ["#00ABC2", "#000000", "#FFD100"]
+      "key": "BHS",
+      "colors": ["#00ABC9", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Bahrain": {
       "key": "BHR",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#CE1126", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Bangladesh": {
-      "key": "BAN",
-      "colors": ["#006A4E", "#F42A41", "#FFFFFF"]
+      "key": "BGD",
+      "colors": ["#006A4E", "#FFFFFF", "#F42A41"],
+      "ideology": "Democratic"
     },
     "Barbados": {
-      "key": "BAR",
-      "colors": ["#00267F", "#FFC726", "#000000"]
+      "key": "BRB",
+      "colors": ["#00267F", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Belarus": {
       "key": "BLR",
-      "colors": ["#D22730", "#007C30", "#FFFFFF"]
+      "colors": ["#D52B1E", "#FFFFFF", "#007849"],
+      "ideology": "Communist"
     },
     "Belgium": {
       "key": "BEL",
-      "colors": ["#FFD700", "#000000", "#FF0000"]
+      "colors": ["#000000", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Belize": {
       "key": "BLZ",
-      "colors": ["#003F87", "#FFFFFF", "#CD153D"]
+      "colors": ["#0033A0", "#FFFFFF", "#C8102E"],
+      "ideology": "Democratic"
     },
     "Benin": {
       "key": "BEN",
-      "colors": ["#FCD116", "#009460", "#E8112D"]
+      "colors": ["#008751", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Bhutan": {
-      "key": "BHU",
-      "colors": ["#FFCC00", "#FF4D00", "#FFFFFF"]
+      "key": "BTN",
+      "colors": ["#FFCC00", "#FFFFFF", "#EF4135"],
+      "ideology": "Monarchy"
     },
     "Bolivia": {
       "key": "BOL",
-      "colors": ["#007934", "#FFD700", "#D52B1E"]
+      "colors": ["#007A33", "#FFD100", "#D52B1E"],
+      "ideology": "Democratic"
     },
     "Bosnia and Herzegovina": {
       "key": "BIH",
-      "colors": ["#002395", "#FFCC00", "#FFFFFF"]
+      "colors": ["#002F6C", "#FFD700", "#FFFFFF"],
+      "ideology": "Democratic"
     },
     "Botswana": {
-      "key": "BOT",
-      "colors": ["#75AADB", "#FFFFFF", "#000000"]
+      "key": "BWA",
+      "colors": ["#00BFFF", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Brazil": {
       "key": "BRA",
-      "colors": ["#009739", "#FFCC29", "#002776"]
+      "colors": ["#009739", "#FFCC29", "#002776"],
+      "ideology": "Democratic"
     },
     "Brunei": {
-      "key": "BRU",
-      "colors": ["#FFD100", "#FFFFFF", "#000000"]
+      "key": "BRN",
+      "colors": ["#FFD100", "#FFFFFF", "#E6001F"],
+      "ideology": "Monarchy"
     },
     "Bulgaria": {
-      "key": "BUL",
-      "colors": ["#00966E", "#D62612", "#FFFFFF"]
+      "key": "BGR",
+      "colors": ["#00966E", "#FFFFFF", "#D62612"],
+      "ideology": "Democratic"
     },
     "Burkina Faso": {
       "key": "BFA",
-      "colors": ["#EF3340", "#009E49", "#FCD116"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Burundi": {
       "key": "BDI",
-      "colors": ["#007849", "#EF3340", "#FFFFFF"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Cabo Verde": {
       "key": "CPV",
-      "colors": ["#003893", "#FFFFFF", "#FFCE00"]
+      "colors": ["#0033A0", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Cambodia": {
-      "key": "CAM",
-      "colors": ["#002FA7", "#FFFFFF", "#EF3340"]
+      "key": "KHM",
+      "colors": ["#002395", "#FFFFFF", "#EF4135"],
+      "ideology": "Democratic"
     },
     "Cameroon": {
       "key": "CMR",
-      "colors": ["#007A5E", "#CE1126", "#FCD116"]
+      "colors": ["#007A5E", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Canada": {
       "key": "CAN",
-      "colors": ["#FF0000", "#FFFFFF", "#000000"]
+      "colors": ["#FF0000", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Central African Republic": {
       "key": "CAF",
-      "colors": ["#003082", "#FFFFFF", "#EF3340"]
+      "colors": ["#007849", "#FFD100", "#D21034"],
+      "ideology": "Democratic"
     },
     "Chad": {
       "key": "TCD",
-      "colors": ["#002664", "#FECB00", "#C60C30"]
+      "colors": ["#00205B", "#FFD100", "#EF4135"],
+      "ideology": "Democratic"
     },
     "Chile": {
       "key": "CHL",
-      "colors": ["#0033A0", "#FFFFFF", "#D52B1E"]
+      "colors": ["#0033A0", "#FFFFFF", "#D52B1E"],
+      "ideology": "Democratic"
     },
     "China": {
       "key": "CHN",
-      "colors": ["#DE2910", "#FFDE00", "#FFFFFF"]
+      "colors": ["#FFDE00", "#FFFFFF", "#EE1C25"],
+      "ideology": "Communist"
     },
     "Colombia": {
       "key": "COL",
-      "colors": ["#FFD100", "#003087", "#CE1126"]
+      "colors": ["#FFD100", "#0072CE", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Comoros": {
       "key": "COM",
-      "colors": ["#FFD100", "#FFFFFF", "#009739"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Congo, Democratic Republic of the": {
       "key": "COD",
-      "colors": ["#007FFF", "#CE1126", "#FCD116"]
+      "colors": ["#007FFF", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Congo, Republic of the": {
       "key": "COG",
-      "colors": ["#009543", "#FFD100", "#EF3340"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Costa Rica": {
       "key": "CRI",
-      "colors": ["#002B7F", "#FFFFFF", "#CE1126"]
+      "colors": ["#00205B", "#FFFFFF", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Croatia": {
       "key": "HRV",
-      "colors": ["#FF0000", "#FFFFFF", "#0000FF"]
+      "colors": ["#001489", "#FFFFFF", "#C60B1E"],
+      "ideology": "Democratic"
     },
     "Cuba": {
       "key": "CUB",
-      "colors": ["#002A8F", "#FFFFFF", "#D62828"]
+      "colors": ["#002A8F", "#FFFFFF", "#D52B1E"],
+      "ideology": "Communist"
     },
     "Cyprus": {
       "key": "CYP",
-      "colors": ["#FF4F00", "#FFFFFF", "#007A5E"]
+      "colors": ["#007A3D", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Czech Republic": {
       "key": "CZE",
-      "colors": ["#D7141A", "#FFFFFF", "#11457E"]
+      "colors": ["#004B87", "#FFFFFF", "#D7141A"],
+      "ideology": "Democratic"
     },
     "Denmark": {
       "key": "DNK",
-      "colors": ["#C60C30", "#FFFFFF", "#000000"]
+      "colors": ["#C8102E", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Djibouti": {
       "key": "DJI",
-      "colors": ["#6AB2E7", "#FFFFFF", "#00A54F"]
+      "colors": ["#6AB2E7", "#FFFFFF", "#00A859"],
+      "ideology": "Democratic"
     },
     "Dominica": {
       "key": "DMA",
-      "colors": ["#007A5E", "#FCD116", "#000000"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Dominican Republic": {
       "key": "DOM",
-      "colors": ["#002B7F", "#FFFFFF", "#CE1126"]
+      "colors": ["#00247D", "#FFFFFF", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Ecuador": {
       "key": "ECU",
-      "colors": ["#FFD100", "#0072CE", "#EF3340"]
+      "colors": ["#FFD100", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Egypt": {
       "key": "EGY",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#CE1126", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "El Salvador": {
       "key": "SLV",
-      "colors": ["#1F47B5", "#FFFFFF", "#0033A0"]
+      "colors": ["#005AA7", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Equatorial Guinea": {
       "key": "GNQ",
-      "colors": ["#418FDE", "#FFFFFF", "#D52B1E"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Eritrea": {
       "key": "ERI",
-      "colors": ["#EF3340", "#007A5E", "#FFC726"]
+      "colors": ["#007A5E", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Estonia": {
       "key": "EST",
-      "colors": ["#0072CE", "#FFFFFF", "#000000"]
+      "colors": ["#0073CF", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Eswatini": {
       "key": "SWZ",
-      "colors": ["#0033A0", "#FFD100", "#D0102C"]
+      "colors": ["#0033A0", "#FFD100", "#CE1126"],
+      "ideology": "Monarchy"
     },
     "Ethiopia": {
       "key": "ETH",
-      "colors": ["#078930", "#FFD100", "#EF3340"]
+      "colors": ["#078930", "#FFD100", "#DA291C"],
+      "ideology": "Democratic"
     },
     "Fiji": {
-      "key": "FIJ",
-      "colors": ["#5FB8FF", "#FFFFFF", "#0033A0"]
+      "key": "FJI",
+      "colors": ["#0033A0", "#FFFFFF", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Finland": {
       "key": "FIN",
-      "colors": ["#002F6C", "#FFFFFF", "#000000"]
+      "colors": ["#0033A0", "#FFFFFF", "#CE1126"],
+      "ideology": "Democratic"
     },
     "France": {
       "key": "FRA",
-      "colors": ["#0055A4", "#FFFFFF", "#EF3340"]
+      "colors": ["#0055A4", "#FFFFFF", "#EF4135"],
+      "ideology": "Democratic"
     },
     "Gabon": {
       "key": "GAB",
-      "colors": ["#009739", "#FFD100", "#00A1DE"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Gambia": {
-      "key": "GAM",
-      "colors": ["#3E5EB9", "#FFFFFF", "#CE1126"]
+      "key": "GMB",
+      "colors": ["#0033A0", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Georgia": {
       "key": "GEO",
-      "colors": ["#FFFFFF", "#CE1126", "#000000"]
+      "colors": ["#D52B1E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Germany": {
       "key": "DEU",
-      "colors": ["#000000", "#FFCE00", "#DD0000"]
+      "colors": ["#000000", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Ghana": {
       "key": "GHA",
-      "colors": ["#006B3F", "#FFD100", "#EF3340"]
+      "colors": ["#006B3F", "#FFD100", "#D21034"],
+      "ideology": "Democratic"
     },
     "Greece": {
       "key": "GRC",
-      "colors": ["#0D5EAF", "#FFFFFF", "#000000"]
+      "colors": ["#0D5EAF", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Grenada": {
       "key": "GRD",
-      "colors": ["#FCD116", "#007A5E", "#CE1126"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Guatemala": {
       "key": "GTM",
-      "colors": ["#4997D0", "#FFFFFF", "#000000"]
+      "colors": ["#4997D0", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Guinea": {
       "key": "GIN",
-      "colors": ["#CE1126", "#FCD116", "#009460"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Guinea-Bissau": {
       "key": "GNB",
-      "colors": ["#CE1126", "#FCD116", "#009739"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Guyana": {
       "key": "GUY",
-      "colors": ["#009739", "#FFD100", "#EF3340"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Haiti": {
       "key": "HTI",
-      "colors": ["#00209F", "#FFFFFF", "#D21034"]
+      "colors": ["#00209F", "#FFFFFF", "#D21034"],
+      "ideology": "Democratic"
     },
     "Honduras": {
       "key": "HND",
-      "colors": ["#0073CF", "#FFFFFF", "#000000"]
+      "colors": ["#00A3E0", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Hungary": {
       "key": "HUN",
-      "colors": ["#C8102E", "#FFFFFF", "#007A33"]
+      "colors": ["#436F4D", "#FFFFFF", "#C8102E"],
+      "ideology": "Democratic"
     },
     "Iceland": {
       "key": "ISL",
-      "colors": ["#003897", "#FFFFFF", "#D72828"]
+      "colors": ["#0033A0", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "India": {
       "key": "IND",
-      "colors": ["#FF9933", "#FFFFFF", "#138808"]
+      "colors": ["#FF9933", "#FFFFFF", "#138808"],
+      "ideology": "Democratic"
     },
     "Indonesia": {
       "key": "IDN",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#FF0000", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Iran": {
       "key": "IRN",
-      "colors": ["#DA0000", "#FFFFFF", "#239F40"]
+      "colors": ["#239F40", "#FFFFFF", "#DA291C"],
+      "ideology": "Democratic"
     },
     "Iraq": {
       "key": "IRQ",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#007A5E", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Ireland": {
       "key": "IRL",
-      "colors": ["#169B62", "#FFFFFF", "#FF883E"]
+      "colors": ["#169B62", "#FFFFFF", "#FF883E"],
+      "ideology": "Democratic"
     },
     "Israel": {
       "key": "ISR",
-      "colors": ["#0038B8", "#FFFFFF", "#000000"]
+      "colors": ["#0033A0", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Italy": {
       "key": "ITA",
-      "colors": ["#008C45", "#FFFFFF", "#CD212A"]
+      "colors": ["#008C45", "#FFFFFF", "#CD212A"],
+      "ideology": "Democratic"
     },
     "Jamaica": {
       "key": "JAM",
-      "colors": ["#FFD100", "#007847", "#000000"]
+      "colors": ["#009739", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Japan": {
       "key": "JPN",
-      "colors": ["#BC002D", "#FFFFFF", "#000000"]
+      "colors": ["#BC002D", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Jordan": {
       "key": "JOR",
-      "colors": ["#007A3D", "#FFFFFF", "#000000"]
+      "colors": ["#007A33", "#FFFFFF", "#EF3340"],
+      "ideology": "Monarchy"
     },
     "Kazakhstan": {
       "key": "KAZ",
-      "colors": ["#00A3E0", "#FFFFFF", "#FFD100"]
+      "colors": ["#00A3E0", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Kenya": {
       "key": "KEN",
-      "colors": ["#000000", "#FFFFFF", "#FF0000"]
+      "colors": ["#006600", "#FFFFFF", "#B22234"],
+      "ideology": "Democratic"
     },
     "Kiribati": {
       "key": "KIR",
-      "colors": ["#0032A0", "#FFFFFF", "#CE1126"]
+      "colors": ["#00247D", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Kuwait": {
       "key": "KWT",
-      "colors": ["#007A3D", "#FFFFFF", "#000000"]
+      "colors": ["#007A33", "#FFFFFF", "#EF3340"],
+      "ideology": "Monarchy"
     },
     "Kyrgyzstan": {
       "key": "KGZ",
-      "colors": ["#CE1126", "#FFD700", "#000000"]
+      "colors": ["#CE1126", "#FFFFFF", "#FFD700"],
+      "ideology": "Democratic"
     },
     "Laos": {
       "key": "LAO",
-      "colors": ["#002868", "#FFFFFF", "#CE1126"]
+      "colors": ["#002868", "#FFFFFF", "#E30A17"],
+      "ideology": "Communist"
     },
     "Latvia": {
       "key": "LVA",
-      "colors": ["#9E3039", "#FFFFFF", "#000000"]
+      "colors": ["#9E3039", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Lebanon": {
       "key": "LBN",
-      "colors": ["#ED1C24", "#FFFFFF", "#007A3D"]
+      "colors": ["#ED1C24", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Lesotho": {
       "key": "LSO",
-      "colors": ["#0032A0", "#FFFFFF", "#000000"]
+      "colors": ["#0033A0", "#FFFFFF", "#009739"],
+      "ideology": "Democratic"
     },
     "Liberia": {
       "key": "LBR",
-      "colors": ["#002868", "#FFFFFF", "#BF0A30"]
+      "colors": ["#002868", "#FFFFFF", "#BF0A30"],
+      "ideology": "Democratic"
     },
     "Libya": {
       "key": "LBY",
-      "colors": ["#000000", "#FFFFFF", "#00B140"]
+      "colors": ["#239F40", "#FFFFFF", "#D21034"],
+      "ideology": "Democratic"
     },
     "Liechtenstein": {
       "key": "LIE",
-      "colors": ["#002F6C", "#FFD700", "#000000"]
+      "colors": ["#002F6C", "#FFD100", "#CE1126"],
+      "ideology": "Monarchy"
     },
     "Lithuania": {
       "key": "LTU",
-      "colors": ["#FDB913", "#006A44", "#C1272D"]
+      "colors": ["#007A3D", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Luxembourg": {
       "key": "LUX",
-      "colors": ["#00A1DE", "#FFFFFF", "#EF4135"]
+      "colors": ["#0033A0", "#FFFFFF", "#EF3340"],
+      "ideology": "Monarchy"
     },
     "Madagascar": {
       "key": "MDG",
-      "colors": ["#007E3A", "#FFFFFF", "#FC3D32"]
+      "colors": ["#007A5E", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Malawi": {
       "key": "MWI",
-      "colors": ["#000000", "#FFFFFF", "#D21034"]
+      "colors": ["#008000", "#FFFFFF", "#C8102E"],
+      "ideology": "Democratic"
     },
     "Malaysia": {
       "key": "MYS",
-      "colors": ["#010066", "#FFFFFF", "#D21034"]
+      "colors": ["#010066", "#FFFFFF", "#DC143C"],
+      "ideology": "Monarchy"
     },
     "Maldives": {
       "key": "MDV",
-      "colors": ["#D21034", "#FFFFFF", "#007E3A"]
+      "colors": ["#D21034", "#FFFFFF", "#007A5E"],
+      "ideology": "Democratic"
     },
     "Mali": {
       "key": "MLI",
-      "colors": ["#14B53A", "#FFD700", "#CE1126"]
+      "colors": ["#14B53A", "#FFD100", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Malta": {
       "key": "MLT",
-      "colors": ["#EF3340", "#FFFFFF", "#000000"]
+      "colors": ["#E30A17", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Marshall Islands": {
       "key": "MHL",
-      "colors": ["#003893", "#FFFFFF", "#FF8C00"]
+      "colors": ["#0033A0", "#FFFFFF", "#FF4B00"],
+      "ideology": "Democratic"
     },
     "Mauritania": {
       "key": "MRT",
-      "colors": ["#007A3D", "#FFD100", "#CE1126"]
+      "colors": ["#007A3D", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Mauritius": {
       "key": "MUS",
-      "colors": ["#EA2839", "#FFD100", "#007A3D"]
+      "colors": ["#00A859", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Mexico": {
       "key": "MEX",
-      "colors": ["#006847", "#FFFFFF", "#CE1126"]
+      "colors": ["#006341", "#FFFFFF", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Micronesia": {
       "key": "FSM",
-      "colors": ["#75B2DD", "#FFFFFF", "#000000"]
+      "colors": ["#009BDB", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Moldova": {
       "key": "MDA",
-      "colors": ["#0033A0", "#FFD100", "#CE1126"]
+      "colors": ["#0033A0", "#FFD100", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Monaco": {
       "key": "MCO",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#FF4B00", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Mongolia": {
       "key": "MNG",
-      "colors": ["#0033A0", "#FFDD00", "#CE1126"]
+      "colors": ["#C1272D", "#FFD100", "#0033A0"],
+      "ideology": "Democratic"
     },
     "Montenegro": {
       "key": "MNE",
-      "colors": ["#D93A1E", "#FFD700", "#000000"]
+      "colors": ["#D52B1E", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Morocco": {
       "key": "MAR",
-      "colors": ["#C1272D", "#FFFFFF", "#000000"]
+      "colors": ["#C1272D", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Mozambique": {
       "key": "MOZ",
-      "colors": ["#007849", "#FFFFFF", "#CE1126"]
+      "colors": ["#007A5E", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Myanmar": {
       "key": "MMR",
-      "colors": ["#FED100", "#007A33", "#DA291C"]
+      "colors": ["#FFD100", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Namibia": {
       "key": "NAM",
-      "colors": ["#0033A0", "#FFFFFF", "#EF3340"]
+      "colors": ["#0033A0", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Nauru": {
       "key": "NRU",
-      "colors": ["#002B7F", "#FFFFFF", "#FFD100"]
+      "colors": ["#0033A0", "#FFD100", "#FFFFFF"],
+      "ideology": "Democratic"
     },
     "Nepal": {
       "key": "NPL",
-      "colors": ["#DC143C", "#FFFFFF", "#0033A0"]
+      "colors": ["#DC143C", "#FFFFFF", "#0033A0"],
+      "ideology": "Democratic"
     },
     "Netherlands": {
       "key": "NLD",
-      "colors": ["#21468B", "#FFFFFF", "#A5261A"]
+      "colors": ["#21468B", "#FFFFFF", "#AE1C28"],
+      "ideology": "Monarchy"
     },
     "New Zealand": {
       "key": "NZL",
-      "colors": ["#00247D", "#FFFFFF", "#FF0000"]
+      "colors": ["#00247D", "#FFFFFF", "#FF2400"],
+      "ideology": "Democratic"
     },
     "Nicaragua": {
       "key": "NIC",
-      "colors": ["#0067C7", "#FFFFFF", "#000000"]
+      "colors": ["#0033A0", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Niger": {
       "key": "NER",
-      "colors": ["#0DB02B", "#FFFFFF", "#FF6200"]
+      "colors": ["#FF8200", "#FFFFFF", "#0DB02B"],
+      "ideology": "Democratic"
     },
     "Nigeria": {
       "key": "NGA",
-      "colors": ["#008753", "#FFFFFF", "#000000"]
+      "colors": ["#008753", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "North Korea": {
       "key": "PRK",
-      "colors": ["#024FA2", "#FFFFFF", "#ED1C27"]
+      "colors": ["#024FA2", "#FFFFFF", "#ED1C27"],
+      "ideology": "Communist"
     },
     "North Macedonia": {
       "key": "MKD",
-      "colors": ["#D20000", "#FFFFFF", "#FFD700"]
+      "colors": ["#CE1126", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Norway": {
       "key": "NOR",
-      "colors": ["#002868", "#FFFFFF", "#D72828"]
+      "colors": ["#BA0C2F", "#FFFFFF", "#00205B"],
+      "ideology": "Monarchy"
     },
     "Oman": {
       "key": "OMN",
-      "colors": ["#D21034", "#FFFFFF", "#007A3D"]
+      "colors": ["#007A33", "#FFFFFF", "#EF3340"],
+      "ideology": "Monarchy"
     },
     "Pakistan": {
       "key": "PAK",
-      "colors": ["#00401A", "#FFFFFF", "#000000"]
+      "colors": ["#006600", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Palau": {
       "key": "PLW",
-      "colors": ["#4AADD6", "#FFFFFF", "#FFD100"]
-    },
-    "Palestine": {
-      "key": "PSE",
-      "colors": ["#007A3D", "#FFFFFF", "#000000"]
+      "colors": ["#00A0DF", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Panama": {
       "key": "PAN",
-      "colors": ["#005AA7", "#FFFFFF", "#EF3340"]
+      "colors": ["#005AA7", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Papua New Guinea": {
       "key": "PNG",
-      "colors": ["#000000", "#FFFFFF", "#D21034"]
+      "colors": ["#000000", "#FFFFFF", "#D21034"],
+      "ideology": "Democratic"
     },
     "Paraguay": {
       "key": "PRY",
-      "colors": ["#0033A0", "#FFFFFF", "#CE1126"]
+      "colors": ["#0033A0", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Peru": {
       "key": "PER",
-      "colors": ["#D91023", "#FFFFFF", "#000000"]
+      "colors": ["#D52B1E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Philippines": {
       "key": "PHL",
-      "colors": ["#0038A8", "#FFFFFF", "#CE1126"]
+      "colors": ["#0038A8", "#FFD100", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Poland": {
       "key": "POL",
-      "colors": ["#DC143C", "#FFFFFF", "#000000"]
+      "colors": ["#D52B1E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Portugal": {
       "key": "PRT",
-      "colors": ["#00A550", "#FFFFFF", "#CE1126"]
+      "colors": ["#008C45", "#FFD100", "#DA291C"],
+      "ideology": "Democratic"
     },
     "Qatar": {
       "key": "QAT",
-      "colors": ["#8D1B3D", "#FFFFFF", "#000000"]
+      "colors": ["#8D1B3D", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Romania": {
       "key": "ROU",
-      "colors": ["#002B7F", "#FFD700", "#CE1126"]
+      "colors": ["#002B7F", "#FFD100", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Russia": {
       "key": "RUS",
-      "colors": ["#0033A0", "#FFFFFF", "#DA291C"]
+      "colors": ["#0033A0", "#FFFFFF", "#DA291C"],
+      "ideology": "Democratic"
     },
     "Rwanda": {
       "key": "RWA",
-      "colors": ["#009E49", "#FFD100", "#0033A0"]
+      "colors": ["#0033A0", "#FFD100", "#78BE20"],
+      "ideology": "Democratic"
     },
     "Saint Kitts and Nevis": {
       "key": "KNA",
-      "colors": ["#009739", "#FFD100", "#CE1126"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Saint Lucia": {
       "key": "LCA",
-      "colors": ["#65C5DB", "#FFFFFF", "#FFCC00"]
+      "colors": ["#6AB2E7", "#FFD100", "#000000"],
+      "ideology": "Democratic"
     },
     "Saint Vincent and the Grenadines": {
       "key": "VCT",
-      "colors": ["#009739", "#FFD100", "#000000"]
+      "colors": ["#78BE20", "#FFD100", "#00A3E0"],
+      "ideology": "Democratic"
     },
     "Samoa": {
       "key": "WSM",
-      "colors": ["#002B7F", "#FFFFFF", "#CE1126"]
+      "colors": ["#0033A0", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "San Marino": {
       "key": "SMR",
-      "colors": ["#007A5E", "#FFFFFF", "#00A3E0"]
+      "colors": ["#0033A0", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Sao Tome and Principe": {
       "key": "STP",
-      "colors": ["#12AD2B", "#FFFFFF", "#FCE100"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Saudi Arabia": {
       "key": "SAU",
-      "colors": ["#006C35", "#FFFFFF", "#000000"]
+      "colors": ["#007A33", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Senegal": {
       "key": "SEN",
-      "colors": ["#00853F", "#FFD700", "#CE1126"]
+      "colors": ["#00853F", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Serbia": {
       "key": "SRB",
-      "colors": ["#002F6C", "#FFFFFF", "#D52B1E"]
+      "colors": ["#C6363C", "#FFFFFF", "#0033A0"],
+      "ideology": "Democratic"
     },
     "Seychelles": {
       "key": "SYC",
-      "colors": ["#003D88", "#FFD100", "#D21034"]
+      "colors": ["#D9232C", "#FFD100", "#0032A0"],
+      "ideology": "Democratic"
     },
     "Sierra Leone": {
       "key": "SLE",
-      "colors": ["#1EB53A", "#FFFFFF", "#0072C6"]
+      "colors": ["#007A5E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Singapore": {
       "key": "SGP",
-      "colors": ["#EF3340", "#FFFFFF", "#000000"]
+      "colors": ["#EF3340", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Slovakia": {
       "key": "SVK",
-      "colors": ["#0B4EA2", "#FFFFFF", "#EF3340"]
+      "colors": ["#0056A2", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Slovenia": {
       "key": "SVN",
-      "colors": ["#0B4EA2", "#FFFFFF", "#EF3340"]
+      "colors": ["#0056A2", "#FFFFFF", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Solomon Islands": {
       "key": "SLB",
-      "colors": ["#007A33", "#FFD100", "#002F6C"]
+      "colors": ["#009739", "#FFD100", "#0033A0"],
+      "ideology": "Democratic"
     },
     "Somalia": {
       "key": "SOM",
-      "colors": ["#4189DD", "#FFFFFF", "#000000"]
+      "colors": ["#418FDE", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "South Africa": {
       "key": "ZAF",
-      "colors": ["#007847", "#FFD100", "#000000"]
+      "colors": ["#007A4D", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "South Korea": {
       "key": "KOR",
-      "colors": ["#0033A0", "#FFFFFF", "#C60C30"]
+      "colors": ["#C8102E", "#FFFFFF", "#003478"],
+      "ideology": "Democratic"
     },
     "South Sudan": {
       "key": "SSD",
-      "colors": ["#0D5EAF", "#FFD100", "#000000"]
+      "colors": ["#078930", "#FFD100", "#D52B1E"],
+      "ideology": "Democratic"
     },
     "Spain": {
       "key": "ESP",
-      "colors": ["#C60B1E", "#FFD700", "#000000"]
+      "colors": ["#AA151B", "#FFD100", "#000000"],
+      "ideology": "Monarchy"
     },
     "Sri Lanka": {
       "key": "LKA",
-      "colors": ["#F4B400", "#FFFFFF", "#008000"]
+      "colors": ["#FF8C00", "#FFD700", "#006400"],
+      "ideology": "Democratic"
     },
     "Sudan": {
       "key": "SDN",
-      "colors": ["#007847", "#FFD100", "#000000"]
+      "colors": ["#00853F", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Suriname": {
       "key": "SUR",
-      "colors": ["#377E3F", "#FFD100", "#EF3340"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Sweden": {
       "key": "SWE",
-      "colors": ["#FECC00", "#005B99", "#000000"]
+      "colors": ["#FECC00", "#005BAA", "#FFFFFF"],
+      "ideology": "Monarchy"
     },
     "Switzerland": {
       "key": "CHE",
-      "colors": ["#FF0000", "#FFFFFF", "#000000"]
+      "colors": ["#D52B1E", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Syria": {
       "key": "SYR",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#000000", "#FFFFFF", "#D21034"],
+      "ideology": "Democratic"
     },
     "Taiwan": {
       "key": "TWN",
-      "colors": ["#002E7E", "#FFFFFF", "#FF0000"]
+      "colors": ["#0033A0", "#FFFFFF", "#C8102E"],
+      "ideology": "Democratic"
     },
     "Tajikistan": {
       "key": "TJK",
-      "colors": ["#00684B", "#FFFFFF", "#D52B1E"]
+      "colors": ["#006736", "#FFD100", "#CE1126"],
+      "ideology": "Democratic"
     },
     "Tanzania": {
       "key": "TZA",
-      "colors": ["#3C8D40", "#FFD100", "#000000"]
+      "colors": ["#FFCD00", "#00A859", "#000000"],
+      "ideology": "Democratic"
     },
     "Thailand": {
       "key": "THA",
-      "colors": ["#241D4F", "#FFFFFF", "#A51931"]
-    },
-    "Timor-Leste": {
-      "key": "TLS",
-      "colors": ["#FF0000", "#FFFFFF", "#000000"]
+      "colors": ["#2D2A4A", "#FFFFFF", "#D52B1E"],
+      "ideology": "Monarchy"
     },
     "Togo": {
       "key": "TGO",
-      "colors": ["#009739", "#FFD100", "#CE1126"]
+      "colors": ["#006B3F", "#FFD100", "#D21034"],
+      "ideology": "Democratic"
     },
     "Tonga": {
       "key": "TON",
-      "colors": ["#C8102E", "#FFFFFF", "#000000"]
+      "colors": ["#C8102E", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Trinidad and Tobago": {
       "key": "TTO",
-      "colors": ["#EF3340", "#FFFFFF", "#000000"]
+      "colors": ["#EF3340", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Tunisia": {
       "key": "TUN",
-      "colors": ["#E70013", "#FFFFFF", "#000000"]
+      "colors": ["#E70013", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Turkey": {
       "key": "TUR",
-      "colors": ["#E30A17", "#FFFFFF", "#000000"]
+      "colors": ["#E30A17", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Turkmenistan": {
       "key": "TKM",
-      "colors": ["#0D5EAF", "#FFD100", "#000000"]
+      "colors": ["#007A33", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Tuvalu": {
       "key": "TUV",
-      "colors": ["#65C5DB", "#FFFFFF", "#FFD700"]
+      "colors": ["#0033A0", "#FFFFFF", "#FFB81C"],
+      "ideology": "Democratic"
     },
     "Uganda": {
       "key": "UGA",
-      "colors": ["#FCDC04", "#000000", "#D01036"]
+      "colors": ["#FFCD00", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Ukraine": {
       "key": "UKR",
-      "colors": ["#FFD700", "#0057B8", "#000000"]
+      "colors": ["#FFD100", "#005BAC", "#000000"],
+      "ideology": "Democratic"
     },
     "United Arab Emirates": {
       "key": "ARE",
-      "colors": ["#00732F", "#FFFFFF", "#000000"]
+      "colors": ["#007A33", "#FFD100", "#EF3340"],
+      "ideology": "Monarchy"
     },
     "United Kingdom": {
       "key": "GBR",
-      "colors": ["#00247D", "#FFFFFF", "#CF142B"]
+      "colors": ["#00247D", "#FFFFFF", "#CF142B"],
+      "ideology": "Monarchy"
     },
     "United States": {
       "key": "USA",
-      "colors": ["#3C3B6E", "#FFFFFF", "#B22234"]
+      "colors": ["#B31942", "#FFFFFF", "#002868"],
+      "ideology": "Democratic"
     },
     "Uruguay": {
       "key": "URY",
-      "colors": ["#0033A0", "#FFFFFF", "#FFD700"]
+      "colors": ["#0033A0", "#FFD100", "#FFFFFF"],
+      "ideology": "Democratic"
     },
     "Uzbekistan": {
       "key": "UZB",
-      "colors": ["#019CDE", "#FFFFFF", "#00B140"]
+      "colors": ["#006847", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Vanuatu": {
       "key": "VUT",
-      "colors": ["#009739", "#FFD100", "#000000"]
+      "colors": ["#009739", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Vatican City": {
       "key": "VAT",
-      "colors": ["#FFD700", "#FFFFFF", "#000000"]
+      "colors": ["#FFD700", "#FFFFFF", "#000000"],
+      "ideology": "Monarchy"
     },
     "Venezuela": {
       "key": "VEN",
-      "colors": ["#FFCC00", "#FFFFFF", "#003DA5"]
+      "colors": ["#0033A0", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Vietnam": {
       "key": "VNM",
-      "colors": ["#DA251D", "#FFFFFF", "#FFD700"]
+      "colors": ["#DA291C", "#FFD100", "#FFFFFF"],
+      "ideology": "Communist"
     },
     "Yemen": {
       "key": "YEM",
-      "colors": ["#CE1126", "#FFFFFF", "#000000"]
+      "colors": ["#CE1126", "#FFFFFF", "#000000"],
+      "ideology": "Democratic"
     },
     "Zambia": {
       "key": "ZMB",
-      "colors": ["#198A00", "#FFD100", "#EF3340"]
+      "colors": ["#008751", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     },
     "Zimbabwe": {
       "key": "ZWE",
-      "colors": ["#007847", "#FFD100", "#000000"]
+      "colors": ["#00853F", "#FFD100", "#EF3340"],
+      "ideology": "Democratic"
     }
   }
+  if (!ideologies.monarchy){ideologies.monarchy = {format: "Kingdom of COUNTRY", change: 6}}
   for (let nation in nationObject){
     if (!["Germany", "Poland", "Czechia", "Slovakia", "Russia", "United States", "Hungary", "France", "Scotland"].includes(nation)){
         nations[nationObject[nation].key] = {
@@ -783,7 +973,7 @@ const nationObject = {
             key: nationObject[nation].key,
             color: nationObject[nation].colors,
             mood: "placeholder",
-            ideology: "democratic",
+            ideology: nationObject[nation].ideology.toLowerCase(),
             power: 5,
             changeMin: 1,
             changeMax: 3,
