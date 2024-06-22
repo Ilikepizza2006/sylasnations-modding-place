@@ -24,4 +24,4 @@ wwiiilauncher.style.backgroundSize = "50% 100% 50% 100%";
 wwiiilauncher.style.backgroundRepeat = "no-repeat";
 wwiiilauncher.style.borderRadius = "10px";
 const htmlofbtn = wwiiilauncher.outerHTML;
-document.getElementById('a').outerHTML = document.getElementById('a').outerHTML + htmlofbtn
+document.getElementById('a').outerHTML = document.getElementById('a').outerHTML + "<button id='WWIIILauncher' style='position: absolute; margin-left: 15px; margin-top: 1px; background-image: linear-gradient(to right, rgb(97, 255, 129), rgb(255, 234, 0)); background-repeat: no-repeat; border-radius: 10px;'>Launch WWIII</button>"
