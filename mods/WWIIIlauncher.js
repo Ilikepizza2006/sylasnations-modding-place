@@ -2,7 +2,6 @@
 
 const wwiiilauncher = document.createElement("button");
 wwiiilauncher.id = "WWIIILauncher";
-wwiiilauncher.onclick = launchWWIII;
 wwiiilauncher.innerText = "Launch WWIII";
 wwiiilauncher.style.position = "absolute";
 wwiiilauncher.style.marginLeft = "15px";
