@@ -5,8 +5,8 @@ nations.SLN = {
     name: "Slungus",
     ideology: "bunny",
     attributes: ["noformat"],
-    power: 50, // cry about it if its too low
-    changeMin: 5,
+    power: 50,
+    changeMin: 1,
     changeMax: 10,
     color: ["#ab8f7d", "#ab8f7d", "#ab8f7d"],
     mood: "super bunny"
