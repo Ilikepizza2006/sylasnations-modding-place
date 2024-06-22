@@ -107,6 +107,10 @@ const ideologies = {
     format: 'Empire of COUNTRY',
     change: 4
   },
+  monarchist: {
+    format: 'Kingdom of COUNTRY',
+    change: 6
+  },
 }
 
 let backMap = {}
