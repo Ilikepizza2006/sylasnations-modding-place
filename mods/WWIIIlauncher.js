@@ -1,6 +1,6 @@
 function launchWWIII() {
     const entries = Object.entries(nations);
-    const fridx = 7;
+    const fridx = 6;
     const gridx = 0;
     const [key1, value1] = entries[fridx];
     one = { key: key1, ...value1 };
