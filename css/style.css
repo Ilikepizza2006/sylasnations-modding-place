@@ -18,6 +18,10 @@ html {
   background-image: linear-gradient(to right, #006eff, #00aaff);
   background-size: 180px 1250px;
   background-repeat: no-repeat;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .txtn2 {
   background-image: linear-gradient(to right, #ff0000, #ae00ff);
