@@ -188,7 +188,7 @@ function tick() {
       } else {
         nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       }
-      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer;"
+      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer; padding-top: 5px; padding-bottom: 5px; border: 1px solid white;"
       natsList.appendChild(nl);
     }
   }
