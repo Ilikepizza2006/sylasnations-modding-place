@@ -71,3 +71,10 @@ body {
   background-repeat: no-repeat;
   border-radius: 10px;
 }
+.red {
+  background-image: linear-gradient(to right, #ff0000, #ffee00);
+  background-size: 50% 100% 50% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
