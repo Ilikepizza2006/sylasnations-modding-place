@@ -299,6 +299,17 @@ function modMenu() {
   }
 }
 
+function createButton(class_, textContent, function_) {
+  const classes = ['red', 'blue', 'green']
+  if (classes.includes(class_)) {
+    let button = document.createElement('button')
+    button.class = class_
+    button.textContent = textContent_
+    button.onclick = function_
+    document.getElementById('cbutton').appendChild(button)
+  }
+}
+
 window.onload = function() {
   console.log('hi')
   for (const c of document.getElementById('nats').children) {
