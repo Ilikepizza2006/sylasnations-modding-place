@@ -14,5 +14,6 @@ nations.SLN = {
 
 ideologies.bunny = {
     change: 6,
-    format: "Bunny republic of COUNTRY"
+    format: "Bunny republic of COUNTRY",
+    max: 5000
 }
