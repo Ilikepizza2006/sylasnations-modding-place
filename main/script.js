@@ -99,7 +99,8 @@ let nations = {
 const ideologies = {
   democratic: {
     format: 'Republic of COUNTRY',
-    change: 4500
+    change: 5,
+    max: 4500
   },
   communist: {
     format: 'Socialist Republic of COUNTRY',
@@ -166,7 +167,7 @@ function tick() {
     for (const k in nations) {
       const idea = nations[k].ideology
       if (idea in ideologies) {
-        if (ideologies.max && nations[k].power <= ideologies.max) {
+        if (nations[k].power < ideologies[idea].max) {
           nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
         }
       }
@@ -230,6 +231,12 @@ function bonus(bt, t) {
       nations[t].changeMin = nations[t].changeMin + 1
     } else if (bt == 3) {
       nations[t].changeMax = nations[t].changeMax + 1
+    } else if (bt == 4) {
+      one = nations[t]
+      document.getElementById('1').textContent = one.name;
+    } else if (bt == 5) {
+      two = nations[t]
+      document.getElementById('2').textContent = two.name;
     }
   }
 }
@@ -254,7 +261,6 @@ function a() {
     document.getElementById('act').textContent = "WON: " + nations[two.key].name
     document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
   }
-  c()
 }
 
 function loadMod(mod) {
