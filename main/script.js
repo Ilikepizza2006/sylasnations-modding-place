@@ -170,6 +170,8 @@ function tick() {
       }
       if (nations[k].attributes && nations[k].attributes.includes("noformat")) {
         nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
+      } else if (nations[k].format) {
+        nl.textContent = k + ": " + nations[k].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       } else {
         nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       }
@@ -303,7 +305,7 @@ function createButton(class_, textContent, function_) {
   const classes = ['red', 'blue', 'green']
   if (classes.includes(class_)) {
     let button = document.createElement('button')
-    button.class = class_
+    button.className = class_
     button.textContent = textContent
     button.onclick = function_
     document.getElementById('cbutton').appendChild(button)
@@ -334,4 +336,3 @@ window.onload = function() {
 }
 
 setInterval(tick, 500)
-
