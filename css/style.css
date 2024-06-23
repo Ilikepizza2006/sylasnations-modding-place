@@ -7,22 +7,32 @@ html {
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 #c {
   background-image: linear-gradient(to right, #61ff81, #ffea00);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 .txtn {
   background-image: linear-gradient(to right, #006eff, #00aaff);
   background-size: 180px 1250px;
   background-repeat: no-repeat;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .txtn2 {
   background-image: linear-gradient(to right, #ff0000, #ae00ff);
   background-size: 2500px 1250px;
   background-repeat: no-repeat;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 @font-face {
     font-family: 'mainfonts';
@@ -64,17 +74,25 @@ body {
   background-repeat: no-repeat;
   border-radius: 5px;
   border-radius: 10px;
+  height: 50px;
 }
 .blue {
   background-image: linear-gradient(to right, #0388fc, #8ceeff);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 .red {
   background-image: linear-gradient(to right, #ff0000, #ffee00);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
-
+button {
+  font-family: 'mainfonts';
+}
+input {
+  font-family: 'mainfonts';
+}
