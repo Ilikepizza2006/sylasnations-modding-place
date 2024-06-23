@@ -99,20 +99,28 @@ let nations = {
 const ideologies = {
   democratic: {
     format: 'Republic of COUNTRY',
-    change: 5
+    change: 4500
   },
   communist: {
     format: 'Socialist Republic of COUNTRY',
-    change: 3
+    change: 3,
+    max: 4500
   },
   fascist: {
     format: 'Empire of COUNTRY',
-    change: 4
+    change: 4,
+    max: 4500
   },
   monarchist: {
     format: 'Kingdom of COUNTRY',
-    change: 6
+    change: 6,
+    max: 5000
   },
+  theocratic: {
+    format: 'COUNTRY',
+    change: 8,
+    max: 650
+  }
 }
 
 let backMap = {}
@@ -158,7 +166,9 @@ function tick() {
     for (const k in nations) {
       const idea = nations[k].ideology
       if (idea in ideologies) {
-        nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
+        if (ideologies.max && nations[k].power <= ideologies.max) {
+          nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
+        }
       }
     }
     const natsList = document.getElementById('nats');
