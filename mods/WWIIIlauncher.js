@@ -14,8 +14,5 @@ wwiiilauncher.innerText = "Launch WWIII";
 wwiiilauncher.style.position = "absolute";
 wwiiilauncher.style.marginLeft = "15px";
 wwiiilauncher.style.marginTop = "1px";
-wwiiilauncher.style.backgroundImage = "linear-gradient(to right, #61ff81, #ffea00)";
-wwiiilauncher.style.backgroundSize = "50% 100% 50% 100%";
-wwiiilauncher.style.backgroundRepeat = "no-repeat";
-wwiiilauncher.style.borderRadius = "10px";
+wwiiilauncher.className = "green";
 document.getElementById('warbutton').appendChild(wwiiilauncher)
