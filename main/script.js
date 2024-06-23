@@ -21,7 +21,7 @@ let nations = {
   },
   "CZE": {
     key: "CZE",
-    name: "Czech",
+    name: "Czech Republic",
     ideology: "democratic",
     power: 14,
     changeMin: 1,
@@ -151,8 +151,17 @@ function c() {
   const [key2, value2] = entries[index2];
   two = { key: key2, ...value2 };
 
-  document.getElementById('1').textContent = one.name;
-  document.getElementById('2').textContent = two.name;
+  if (one.attributes && one.attributes.includes("noformat")) {
+    document.getElementById('1').textContent = one.name;
+  } else {
+    document.getElementById('1').textContent = ideologies[one.ideology].format.replace('COUNTRY', one.name);
+  }
+
+  if (two.attributes && two.attributes.includes("noformat")) {
+    document.getElementById('2').textContent = two.name;
+  } else {
+    document.getElementById('2').textContent = ideologies[two.ideology].format.replace('COUNTRY', two.name);
+  }
 }
 
 function tick() {
@@ -183,8 +192,6 @@ function tick() {
       }
       if (nations[k].attributes && nations[k].attributes.includes("noformat")) {
         nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
-      } else if (nations[k].format) {
-        nl.textContent = k + ": " + nations[k].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       } else {
         nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       }
@@ -243,23 +250,35 @@ function bonus(bt, t) {
 
 
 function a() {
+  let twon = ''
+  let onen = ''
+  if (two.attributes && two.attributes.includes('noformat')) {
+    twon = two.name
+  } else {
+    twon = ideologies[two.ideology].format.replace('COUNTRY', two.name)
+  }
+  if (one.attributes && one.attributes.includes('noformat')) {
+    onen = one.name
+  } else {
+    onen = ideologies[one.ideology].format.replace('COUNTRY', one.name)
+  }
   if (one.power > two.power) {
     nations[two.key].power -= two.changeMin + 5
     nations[two.key].mood = "sad"
     nations[one.key].power += two.changeMin + 5
-    document.getElementById('act').textContent = "WON: " + nations[one.key].name
-    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
+    document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + onen + '</a>'
+    document.getElementById('result').className = 'txtn'
   } else if (one.power === two.power) {
-    document.getElementById('act').textContent = "TIE: " + nations[one.key].name + " - " + nations[two.key].name;
-    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
+    document.getElementById('result').innerHTML = "TIE: " + "<a class='txtn2'>" + onen + '-' + twon + "</a>"
+    document.getElementById('result').className = 'txtn'
     nations[two.key].power -= two.changeMax - 3
     nations[one.key].power -= one.changeMax - 3
   } else {
     nations[two.key].power += one.changeMin + 5
     nations[one.key].power -= one.changeMin + 5
     nations[one.key].mood = "sad"
-    document.getElementById('act').textContent = "WON: " + nations[two.key].name
-    document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
+    document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + twon + '</a>'
+    document.getElementById('result').className = 'txtn'
   }
 }
 
