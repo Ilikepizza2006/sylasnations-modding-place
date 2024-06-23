@@ -13,22 +13,32 @@
   <p> </p>
   <p class="txtn">NATION TWO: <a class="txtn2" id='2'>NONE</a> </p>
   <p> </p>
-  <button id="c" onclick="c()">CHOOSE</button>
-  <button id="a" onclick="a()">ACTION</button>
+  <div id='warbutton'>
+    <button id="c" onclick="c()">CHOOSE</button>
+    <button id="a" onclick="a()">ACTION</button>
+  </div>
   <p> </p>
   <div id="act">
     <p class="txtn">NONE: <a class="txtn2"> </a></p>
   </div>
   <p> </p>
+  <p class="green" id="year">YEAR: 0</p>
+  <p> </p>
   <div id="nats">
 
   </div>
   <p> </p>
-  <p id="ds" onclick="document.getElementById('disc').textContent = 'PLEASE WAIT...'; document.getElementById('disc').click();">Discord</p>
+  <a id="ds" onclick="document.getElementById('disc').textContent = 'PLEASE WAIT...'; document.getElementById('disc').click();">Discord</a>
+  <a id="ds" onclick="document.getElementById('chl').textContent = 'PLEASE WAIT...'; document.getElementById('chl').click();"> - Changelog</a>
   <a href="https://discord.gg/5XHjPcNxDB" id="disc"></a>
+  <a href="changelog.html" id="chl"></a>
   <p> </p>
   <button class="blue" onclick='bType = 1'>POWER BONUS</button>
   <button class="green" onclick='bType = 3'>CHANGE BONUS</button>
+  <button class="red" onclick='bType = 4'>SET ONE</button>
+  <button class="red" onclick='bType = 5'>SET TWO</button>
+  <p> </p>
+  <div id='cbutton'></div>
   <p> </p>
   <button class="green" onclick='modMenu()'>MODS</button>
   <p> </p>
@@ -47,7 +57,7 @@
   <p> </p>
   <div class="mod2" id="mList2">
     <li><a class='ds' href='modlist.html'>Mod List</a></li>
-    <li><a class='ds' href="https://sylasnations.fandom.com/wiki/Modding_tutorial">Modding tutorial</a></li>
+    <li><a class='ds' href="https://sylasnations.fandom.com/wiki/Modding_Tutorial">Modding tutorial</a></li>
   </div>
   <script src="main/script.js"></script>
 </body>

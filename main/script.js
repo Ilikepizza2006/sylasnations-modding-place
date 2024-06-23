@@ -21,11 +21,13 @@ let nations = {
   },
   "CZE": {
     key: "CZE",
-    name: "Czechia",
+    name: "Czech",
     ideology: "democratic",
     power: 14,
     changeMin: 1,
     changeMax: 4,
+    attributes: ["noformat"],
+    format: 'COUNTRY republic',
     color: ["#ff0000", "#2471ed", "#dedede"],
     mood: "beer"
   },
@@ -97,21 +99,36 @@ let nations = {
 const ideologies = {
   democratic: {
     format: 'Republic of COUNTRY',
-    change: 5
+    change: 5,
+    max: 4500
   },
   communist: {
     format: 'Socialist Republic of COUNTRY',
-    change: 3
+    change: 3,
+    max: 4500
   },
   fascist: {
     format: 'Empire of COUNTRY',
-    change: 4
+    change: 4,
+    max: 4500
   },
+  monarchist: {
+    format: 'Kingdom of COUNTRY',
+    change: 6,
+    max: 5000
+  },
+  theocratic: {
+    format: 'COUNTRY',
+    change: 8,
+    max: 650
+  }
 }
 
 let backMap = {}
 
 let one = null
+let year = 0
+let ycounter = 0
 let two = null
 let canTick = true
 let used = false
@@ -139,12 +156,20 @@ function c() {
 }
 
 function tick() {
+  ycounter += 0.5
+  if (ycounter == 10.0) {
+    year += 1
+    ycounter = 0
+    document.getElementById('year').textContent = 'YEAR: ' + year
+  }
   if (canTick == true) {
     backMap = {}
     for (const k in nations) {
       const idea = nations[k].ideology
       if (idea in ideologies) {
-        nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
+        if (nations[k].power < ideologies[idea].max) {
+          nations[k].power += (Math.floor(Math.random() * (nations[k].changeMax - nations[k].changeMin + 1) - nations[k].changeMin)) + (Math.floor(Math.random() * (ideologies[idea].change - (ideologies[idea].change - 3) + 1)))
+        }
       }
     }
     const natsList = document.getElementById('nats');
@@ -158,10 +183,12 @@ function tick() {
       }
       if (nations[k].attributes && nations[k].attributes.includes("noformat")) {
         nl.textContent = k + ": " + nations[k].name + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
+      } else if (nations[k].format) {
+        nl.textContent = k + ": " + nations[k].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       } else {
         nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       }
-      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer;"
+      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer; padding-top: 5px; padding-bottom: 5px; border: 1px solid white;"
       natsList.appendChild(nl);
     }
   }
@@ -204,6 +231,12 @@ function bonus(bt, t) {
       nations[t].changeMin = nations[t].changeMin + 1
     } else if (bt == 3) {
       nations[t].changeMax = nations[t].changeMax + 1
+    } else if (bt == 4) {
+      one = nations[t]
+      document.getElementById('1').textContent = one.name;
+    } else if (bt == 5) {
+      two = nations[t]
+      document.getElementById('2').textContent = two.name;
     }
   }
 }
@@ -228,7 +261,6 @@ function a() {
     document.getElementById('act').textContent = "WON: " + nations[two.key].name
     document.getElementById('act').style = "background-image: linear-gradient(to right, #006eff, #00aaff); background-size: 180px 1250px; background-repeat: no-repeat;"
   }
-  c()
 }
 
 function loadMod(mod) {
@@ -287,6 +319,17 @@ function modMenu() {
   }
 }
 
+function createButton(class_, textContent, function_) {
+  const classes = ['red', 'blue', 'green']
+  if (classes.includes(class_)) {
+    let button = document.createElement('button')
+    button.className = class_
+    button.textContent = textContent
+    button.onclick = function_
+    document.getElementById('cbutton').appendChild(button)
+  }
+}
+
 window.onload = function() {
   console.log('hi')
   for (const c of document.getElementById('nats').children) {
@@ -311,4 +354,3 @@ window.onload = function() {
 }
 
 setInterval(tick, 500)
-

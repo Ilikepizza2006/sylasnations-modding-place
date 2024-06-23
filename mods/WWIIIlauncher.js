@@ -1,6 +1,6 @@
 function launchWWIII() {
     const entries = Object.entries(nations);
-    const fridx = 6;
+    const fridx = 7;
     const gridx = 0;
     const [key1, value1] = entries[fridx];
     one = { key: key1, ...value1 };
@@ -23,4 +23,5 @@ wwiiilauncher.style.backgroundImage = "linear-gradient(to right, #61ff81, #ffea0
 wwiiilauncher.style.backgroundSize = "50% 100% 50% 100%";
 wwiiilauncher.style.backgroundRepeat = "no-repeat";
 wwiiilauncher.style.borderRadius = "10px";
+document.getElementById('warbutton').appendChild(wwiiilauncher)
 document.getElementById('warbutton').appendChild(wwiiilauncher)
