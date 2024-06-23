@@ -309,7 +309,7 @@ function saveMod(mod) {
 function removeMod(mod) {
   try {
     if (mods.includes(mod)) {
-      mods.pop(mod)
+      delete mods[mod]
       localStorage.setItem('mods', JSON.stringify(mods))
       alert('Reload page to see changes')
     } else {
