@@ -21,11 +21,13 @@ let nations = {
   },
   "CZE": {
     key: "CZE",
-    name: "Czechia",
+    name: "Czech",
     ideology: "democratic",
     power: 14,
     changeMin: 1,
     changeMax: 4,
+    attributes: ["noformat"],
+    format: 'COUNTRY republic',
     color: ["#ff0000", "#2471ed", "#dedede"],
     mood: "beer"
   },
