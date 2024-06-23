@@ -7,12 +7,14 @@ html {
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 #c {
   background-image: linear-gradient(to right, #61ff81, #ffea00);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 .txtn {
   background-image: linear-gradient(to right, #006eff, #00aaff);
@@ -72,17 +74,25 @@ body {
   background-repeat: no-repeat;
   border-radius: 5px;
   border-radius: 10px;
+  height: 50px;
 }
 .blue {
   background-image: linear-gradient(to right, #0388fc, #8ceeff);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
 .red {
   background-image: linear-gradient(to right, #ff0000, #ffee00);
   background-size: 50% 100% 50% 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
+  height: 50px;
 }
-
+button {
+  font-family: 'mainfonts';
+}
+input {
+  font-family: 'mainfonts';
+}
