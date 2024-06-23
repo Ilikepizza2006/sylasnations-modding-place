@@ -29,7 +29,8 @@ let nations = {
     attributes: ["noformat"],
     format: 'COUNTRY republic',
     color: ["#ff0000", "#2471ed", "#dedede"],
-    mood: "beer"
+    mood: "beer",
+    elections: 4
   },
   "SKO": {
     key: "SKO",
@@ -87,7 +88,7 @@ let nations = {
   "SCT": {
     key: "SCT",
     name: "Scotland",
-    ideology: "democratic",
+    ideology: "monarchist",
     power: 5,
     changeMin: 1,
     changeMax: 2,
@@ -124,6 +125,12 @@ const ideologies = {
   }
 }
 
+const alliances = {
+  Alpha: [],
+  Beta: [],
+  Gamma: []
+}
+
 let backMap = {}
 
 let one = null
@@ -151,17 +158,57 @@ function c() {
   const [key2, value2] = entries[index2];
   two = { key: key2, ...value2 };
 
-  if (one.attributes && one.attributes.includes("noformat")) {
-    document.getElementById('1').textContent = one.name;
+  if (alliances.Alpha.includes(one.key) && alliances.Alpha.includes(two.key)) {
+    c()
   } else {
-    document.getElementById('1').textContent = ideologies[one.ideology].format.replace('COUNTRY', one.name);
-  }
+    if (one.attributes && one.attributes.includes("noformat")) {
+      document.getElementById('1').textContent = one.name;
+    } else {
+      document.getElementById('1').textContent = ideologies[one.ideology].format.replace('COUNTRY', one.name);
+    }
 
-  if (two.attributes && two.attributes.includes("noformat")) {
-    document.getElementById('2').textContent = two.name;
-  } else {
-    document.getElementById('2').textContent = ideologies[two.ideology].format.replace('COUNTRY', two.name);
+    if (two.attributes && two.attributes.includes("noformat")) {
+      document.getElementById('2').textContent = two.name;
+    } else {
+      document.getElementById('2').textContent = ideologies[two.ideology].format.replace('COUNTRY', two.name);
+    }
   }
+  if (alliances.Beta.includes(one.key) && alliances.Beta.includes(two.key)) {
+    c()
+  } else {
+    if (one.attributes && one.attributes.includes("noformat")) {
+      document.getElementById('1').textContent = one.name;
+    } else {
+      document.getElementById('1').textContent = ideologies[one.ideology].format.replace('COUNTRY', one.name);
+    }
+
+    if (two.attributes && two.attributes.includes("noformat")) {
+      document.getElementById('2').textContent = two.name;
+    } else {
+      document.getElementById('2').textContent = ideologies[two.ideology].format.replace('COUNTRY', two.name);
+    }
+  }
+  if (alliances.Gamma.includes(one.key) && alliances.Gamma.includes(two.key)) {
+    c()
+  } else {
+    if (one.attributes && one.attributes.includes("noformat")) {
+      document.getElementById('1').textContent = one.name;
+    } else {
+      document.getElementById('1').textContent = ideologies[one.ideology].format.replace('COUNTRY', one.name);
+    }
+
+    if (two.attributes && two.attributes.includes("noformat")) {
+      document.getElementById('2').textContent = two.name;
+    } else {
+      document.getElementById('2').textContent = ideologies[two.ideology].format.replace('COUNTRY', two.name);
+    }
+  }
+}
+
+function choiceR(dict) {
+  const k = Object.keys(dict);
+  const rk = k[Math.floor(Math.random() * k.length)];
+  return rk;
 }
 
 function tick() {
@@ -174,6 +221,11 @@ function tick() {
   if (canTick == true) {
     backMap = {}
     for (const k in nations) {
+      if (nations[k].hasOwnProperty('elections')) {
+        if (year % nations[k].elections) {
+          nations[k].ideology = choiceR(ideologies)
+        }
+      }
       const idea = nations[k].ideology
       if (idea in ideologies) {
         if (nations[k].power < ideologies[idea].max) {
@@ -187,7 +239,7 @@ function tick() {
     }
     for (const k in nations) {
       const nl = document.createElement('li');
-      nl.onclick = function() {
+      nl.onclick = function () {
         bonus(bType, nations[k].key)
       }
       if (nations[k].attributes && nations[k].attributes.includes("noformat")) {
@@ -195,7 +247,7 @@ function tick() {
       } else {
         nl.textContent = k + ": " + ideologies[nations[k].ideology].format.replace('COUNTRY', nations[k].name) + ", POWER: " + nations[k].power + ", MOOD: " + nations[k].mood + ", IDEOLOGY: " + nations[k].ideology;
       }
-      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + "background-size: 1500px;" + " background-repeat: no-repeat; cursor: pointer; padding-top: 5px; padding-bottom: 5px; border: 1px solid white;"
+      nl.style = "background-image: linear-gradient(to right, " + nations[k].color + ");" + " background-repeat: no-repeat; cursor: pointer; padding-top: 5px; padding-bottom: 5px; border: 1px solid white;"
       natsList.appendChild(nl);
     }
   }
@@ -205,15 +257,15 @@ function tick() {
 function mood() {
   for (const k in nations) {
     if (nations[k].power < 0 && nations[k].power > -50) {
-        nations[k].mood = "sad";
+      nations[k].mood = "sad";
     } else if (nations[k].power < -49) {
-        nations[k].mood = "pain";
+      nations[k].mood = "pain";
     } else if (nations[k].power > 0 && nations[k].power <= 50) {
-        nations[k].mood = "normal";
+      nations[k].mood = "normal";
     } else if (nations[k].power > 50 && nations[k].power <= 135) {
-        nations[k].mood = "stronk";
+      nations[k].mood = "stronk";
     } else if (nations[k].power > 135) {
-        nations[k].mood = "super stronk";
+      nations[k].mood = "super stronk";
     }
 
     if ("FRA" in nations && "GER" in nations) {
@@ -244,41 +296,63 @@ function bonus(bt, t) {
     } else if (bt == 5) {
       two = nations[t]
       document.getElementById('2').textContent = two.name;
+    } else if (bt == 6) {
+      alliances.Alpha.push(nations[t].key)
+    } else if (bt == 7) {
+      alliances.Beta.push(nations[t].key)
+    } else if (bt == 8) {
+      alliances.Gamma.push(nations[t].key)
+    } else if (bt == 9) {
+      if (alliances.Alpha.includes(nations[t].key)) {
+        alliances.Alpha.indexOf(nations[t].key) > -1 && alliances.Alpha.splice(alliances.Alpha.indexOf(nations[t].key), 1);
+      } else if (alliances.Beta.includes(nations[t].key)) {
+        alliances.Beta.indexOf(nations[t].key) > -1 && alliances.Beta.splice(alliances.Beta.indexOf(nations[t].key), 1);
+      } else if (alliances.Gamma.includes(nations[t].key)) {
+        alliances.Gamma.indexOf(nations[t].key) > -1 && alliances.Gamma.splice(alliances.Gamma.indexOf(nations[t].key), 1);
+      }
     }
   }
 }
 
 
 function a() {
-  let twon = ''
-  let onen = ''
-  if (two.attributes && two.attributes.includes('noformat')) {
-    twon = two.name
+  if (alliances.Alpha.includes(one.key) && alliances.Alpha.includes(two.key)) {
+    document.getElementById('result').textContent = 'NONE: Allies!'
+  } else if (alliances.Beta.includes(one.key) && alliances.Beta.includes(two.key)) {
+    document.getElementById('result').textContent = 'NONE: Allies!'
+  } else if (alliances.Gamma.includes(one.key) && alliances.Gamma.includes(two.key)) {
+      document.getElementById('result').textContent = 'NONE: Allies!'
   } else {
-    twon = ideologies[two.ideology].format.replace('COUNTRY', two.name)
-  }
-  if (one.attributes && one.attributes.includes('noformat')) {
-    onen = one.name
-  } else {
-    onen = ideologies[one.ideology].format.replace('COUNTRY', one.name)
-  }
-  if (one.power > two.power) {
-    nations[two.key].power -= two.changeMin + 5
-    nations[two.key].mood = "sad"
-    nations[one.key].power += two.changeMin + 5
-    document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + onen + '</a>'
-    document.getElementById('result').className = 'txtn'
-  } else if (one.power === two.power) {
-    document.getElementById('result').innerHTML = "TIE: " + "<a class='txtn2'>" + onen + '-' + twon + "</a>"
-    document.getElementById('result').className = 'txtn'
-    nations[two.key].power -= two.changeMax - 3
-    nations[one.key].power -= one.changeMax - 3
-  } else {
-    nations[two.key].power += one.changeMin + 5
-    nations[one.key].power -= one.changeMin + 5
-    nations[one.key].mood = "sad"
-    document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + twon + '</a>'
-    document.getElementById('result').className = 'txtn'
+    let twon = ''
+    let onen = ''
+    if (two.attributes && two.attributes.includes('noformat')) {
+      twon = two.name
+    } else {
+      twon = ideologies[two.ideology].format.replace('COUNTRY', two.name)
+    }
+    if (one.attributes && one.attributes.includes('noformat')) {
+      onen = one.name
+    } else {
+      onen = ideologies[one.ideology].format.replace('COUNTRY', one.name)
+    }
+    if (one.power > two.power) {
+      nations[two.key].power -= two.changeMin + 5
+      nations[two.key].mood = "sad"
+      nations[one.key].power += two.changeMin + 5
+      document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + onen + '</a>'
+      document.getElementById('result').className = 'txtn'
+    } else if (one.power === two.power) {
+      document.getElementById('result').innerHTML = "TIE: " + "<a class='txtn2'>" + onen + '-' + twon + "</a>"
+      document.getElementById('result').className = 'txtn'
+      nations[two.key].power -= two.changeMax - 3
+      nations[one.key].power -= one.changeMax - 3
+    } else {
+      nations[two.key].power += one.changeMin + 5
+      nations[one.key].power -= one.changeMin + 5
+      nations[one.key].mood = "sad"
+      document.getElementById('result').innerHTML = "WON: " + "<a class='txtn2'>" + twon + '</a>'
+      document.getElementById('result').className = 'txtn'
+    }
   }
 }
 
@@ -309,7 +383,7 @@ function saveMod(mod) {
 function removeMod(mod) {
   try {
     if (mods.includes(mod)) {
-      delete mods[mod]
+      mods.pop()
       localStorage.setItem('mods', JSON.stringify(mods))
       alert('Reload page to see changes')
     } else {
@@ -349,7 +423,7 @@ function createButton(class_, textContent, function_) {
   }
 }
 
-window.onload = function() {
+window.onload = function () {
   console.log('hi')
   for (const c of document.getElementById('nats').children) {
     document.getElementById('nats').removeChild(c)
